@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/linear_background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.18"
+            android:background="@color/title"
+            app:srcCompat="@drawable/back"
+            />
+
+        <TextView
+
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.64"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="设置"
+            android:textSize="25dp" />
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.18"
+            android:background="@color/title"
+
+
+            />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_marginTop="4pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_button_bg"
+            android:text="学习设置"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:gravity="center_vertical"
+            android:layout_marginTop="0pt"
+            android:background="@drawable/setting_button_bg"
+            android:text="提醒设置"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:gravity="center_vertical"
+            android:layout_marginTop="0pt"
+            android:background="@drawable/setting_button_bg"
+            android:text="账号设置"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:gravity="center_vertical"
+            android:layout_marginTop="0pt"
+            android:background="@drawable/setting_button_bg"
+            android:text="其他设置"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:gravity="center_vertical"
+            android:layout_marginTop="0pt"
+            android:background="@drawable/setting_button_bg"
+            android:text="学习设置"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6pt"
+            android:background="@drawable/setting_button_bg"
+            android:textSize="18dp"
+            android:text="夜间模式"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:background="@drawable/setting_button_bg"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6pt"
+            android:text="给个好评"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:background="@drawable/setting_button_bg"
+            android:gravity="center_vertical"
+            android:text="关于生化宝典"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/goforward"
+            android:fontFamily="@string/title_activity_settings"
+            android:background="@drawable/setting_button_bg"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6pt"
+            android:text="退出账号"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8pt"/>
+
+
+    </LinearLayout>
+</LinearLayout>
