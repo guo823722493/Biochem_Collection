@@ -18,6 +18,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent login_successful=new Intent(Login.this,Catalog.class);
                 startActivity(login_successful);
+                finish();
             }
         });
     }
