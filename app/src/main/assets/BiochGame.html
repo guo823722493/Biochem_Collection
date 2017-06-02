@@ -14,7 +14,7 @@
   <link href="assets/css/video-default.css" rel="stylesheet">
   <script src="assets/js/jquery-1.8.1.min.js"></script>
   <script src="assets/js/jquery.video-ui.js"></script>
-  
+
   <script type="text/javascript">
 	  var Que1_time=0;
 	  var Que2_time=0;
@@ -78,7 +78,7 @@ function CheckAns_3() {
       var video = document.getElementById("MyVideo");
       for (i = 0; i < temp.length; i++) {
         if (temp[i].checked) {
-          if (temp[i].value == 'C') {
+          if (temp[i].value == 'B') {
 			  correct3+=1;
             layer.closeAll();
             video.play();
@@ -196,7 +196,7 @@ function CheckAns_3() {
           function QueTime()
           {
             var video = document.getElementById("MyVideo");
-     	   if(video.currentTime>=10&&video.currentTime<=11&&Que1_time==0)
+     	   if(video.currentTime>=50&&video.currentTime<=51&&Que1_time==0)
      		   {
      			   video.pause();
            			QueLayer1();

@@ -76,7 +76,7 @@
       var video = document.getElementById("MyVideo");
       for (i = 0; i < temp.length; i++) {
         if (temp[i].checked) {
-          if (temp[i].value == 'C') {
+          if (temp[i].value == 'B') {
         correct3+=1;
             layer.closeAll();
             video.play();
@@ -90,23 +90,24 @@
 
     }
 
-    function CheckAns_4(){
-      var temp = document.getElementById("radio");
-      var video = document.getElementById("MyVideo");
-      for (i = 0; i < temp.length; i++) {
-        if (temp[i].checked) {
-          if (temp[i].value == 'B') {
-        correct4+=1;
-            layer.closeAll();
-            video.play();
-          }
-     else {
-            layer.msg('回答错误');
-       incorrect4+=1;
+    function CheckAns_4() {
+          var temp = document.getElementsByName("radio");
+        var video = document.getElementById("MyVideo");
+        for (i = 0; i < temp.length; i++) {
+          if (temp[i].checked) {
+            if (temp[i].value == 'B') {
+          correct4+=1;
+              layer.closeAll();
+              video.play();
+            }
+       else {
+              layer.msg('回答错误');
+         incorrect4+=1;
+            }
           }
         }
+
       }
-    }
 
     function CheckAns_5() {
             var temp = document.getElementsByName("radio");
@@ -132,8 +133,8 @@
               var index = layer.open({
               title: '第一题',
               type: 1,
-              offset: ['30px', '0px'],
-              area: ['380px', '300px'],
+              offset: ['60px', '30px'],
+              area: ['300px', '280px'],
               shadeClose: false, //点击遮罩关闭
           closeBtn: 0,
               content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>1.在DNA复制的第一步，需要结合哪种酶才能实现双链分离?\</p> \<label>\<input type="radio" name="radio" value="A">拓扑异构酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">引物酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">解旋酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">逆转录酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_1()" value="提交答案">  \</form> \<\/div>'
@@ -166,6 +167,7 @@
               content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>3. DNA复制的第一步需要？\</p> \<label>\<input type="radio" name="radio" value="A">DNA解旋酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">DNA聚合酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">DAN修饰酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_3()" value="提交答案">  \</form> \<\/div>'
             });
           }
+
           function QueLayer4() {
 
               var index = layer.open({
@@ -178,7 +180,8 @@
               content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>4. 在后随链上存在那种特殊结构成分\</p> \<label>\<input type="radio" name="radio" value="A">碱基对\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">冈崎片段\</label> \<br> \<label>\<input type="radio" name="radio" value="C">引物\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_4()" value="提交答案">  \</form> \<\/div>'
             });
           }
-      function QueLayer5() {
+
+        function QueLayer5() {
 
               var index = layer.open({
               title: '第五题',
@@ -194,7 +197,7 @@
           function QueTime()
           {
             var video = document.getElementById("MyVideo");
-         if(video.currentTime>=10&&video.currentTime<=11&&Que1_time==0)
+         if(video.currentTime>=50&&video.currentTime<=51&&Que1_time==0)
            {
              video.pause();
                 QueLayer1();
@@ -326,7 +329,7 @@
         <div class="row episode-list">
           <div class="col-sm-7">
             <div>
-              <video id="MyVideo"  controls preload="auto" ontimeupdate="QueTime()" onEnded="Get_Star()"data-setup="{}" x5-video-player-fullscreen="true" x5-video-player-type="h5">
+              <video id="MyVideo" autoplay preload="auto" ontimeupdate="QueTime()" onEnded="Get_Star()"data-setup="{}" x5-video-player-fullscreen="true" x5-video-player-type="h5">
                 <source src="DNA.mp4" type="video/mp4">
             </div>
           </div>
