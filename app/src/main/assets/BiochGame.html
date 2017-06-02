@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DNA Demo</title>
+
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="layer-v3.0.3/layer/layer.js"></script>
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/video-default.css" rel="stylesheet">
+  <script src="assets/js/jquery-1.8.1.min.js"></script>
+  <script src="assets/js/jquery.video-ui.js"></script>
+  
+  <script type="text/javascript">
+	  var Que1_time=0;
+	  var Que2_time=0;
+	  var Que3_time=0;
+    var Que4_time=0;
+    var Que5_time=0;
+	  var correct1=0;
+	  var incorrect1=0;
+	  var correct2=0;
+	  var incorrect2=0;
+	  var correct3=0;
+	  var incorrect3=0;
+    var correct4=0;
+    var incorrect4=0;
+    var correct5=0;
+    var incorrect5=0;
+	  var correct_count=0;
+	  var incorrect_count=0;
+
+
+	  function CheckAns_1() {
+	var video = document.getElementById("MyVideo");
+       var temp = document.getElementsByName("radio");
+
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'C') {
+			 correct1+=1;
+            layer.closeAll();
+            video.play();
+          }
+		 else {
+            layer.msg('回答错误');
+			 incorrect1+=1;
+          }
+        }
+      }
+
+    }
+	  function CheckAns_2() {
+        var temp = document.getElementsByName("radio");
+      var video = document.getElementById("MyVideo");
+
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'C') {
+			  correct2+=1;
+            layer.closeAll();
+            video.play();
+          }
+		 else {
+            layer.msg('回答错误');
+			 incorrect2+=1;
+          }
+        }
+      }
+
+    }
+function CheckAns_3() {
+        var temp = document.getElementsByName("radio");
+      var video = document.getElementById("MyVideo");
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'C') {
+			  correct3+=1;
+            layer.closeAll();
+            video.play();
+          }
+		 else {
+            layer.msg('回答错误');
+			 incorrect3+=1;
+          }
+        }
+      }
+
+    }
+
+    function CheckAns_4(){
+      var temp = document.getElementById("radio");
+      var video = document.getElementById("MyVideo");
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'B') {
+        correct4+=1;
+            layer.closeAll();
+            video.play();
+          }
+     else {
+            layer.msg('回答错误');
+       incorrect4+=1;
+          }
+        }
+      }
+    }
+
+    function CheckAns_5() {
+            var temp = document.getElementsByName("radio");
+          var video = document.getElementById("MyVideo");
+          for (i = 0; i < temp.length; i++) {
+            if (temp[i].checked) {
+              if (temp[i].value == 'B') {
+    			  correct5+=1;
+                layer.closeAll();
+                video.play();
+              }
+    		 else {
+                layer.msg('回答错误');
+    			 incorrect5+=1;
+              }
+            }
+          }
+
+        }
+
+        function QueLayer1() {
+
+              var index = layer.open({
+              title: '第一题',
+              type: 1,
+              offset: ['60px', '120px'],
+              area: ['400px', '275px'],
+              shadeClose: false, //点击遮罩关闭
+      		closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>1.在DNA复制的第一步，需要结合哪种酶才能实现双链分离?\</p> \<label>\<input type="radio" name="radio" value="A">拓扑异构酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">引物酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">解旋酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">逆转录酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_1()" value="提交答案">  \</form> \<\/div>'
+
+            });
+          }
+
+      	  function QueLayer2() {
+
+              var index = layer.open({
+              title: '第二题',
+              type: 1,
+              offset: ['60px', '120px'],
+              area: ['400px', '275px'],
+              shadeClose: false, //点击遮罩关闭
+      		closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>2. 在单链复制的第一步，需要哪种酶的帮助？\</p> \<label>\<input type="radio" name="radio" value="A">拓扑异构酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">连接酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">引发酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">转录酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_2()" value="提交答案">  \</form> \<\/div>'
+
+            });
+          }
+      	  function QueLayer3() {
+
+              var index = layer.open({
+              title: '第三题',
+              type: 1,
+              offset: ['60px', '120px'],
+              area: ['400px', '275px'],
+              shadeClose: false, //点击遮罩关闭
+      		closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>3. DNA复制的第一步需要？\</p> \<label>\<input type="radio" name="radio" value="A">DNA解旋酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">DNA聚合酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">DAN修饰酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_3()" value="提交答案">  \</form> \<\/div>'
+            });
+          }
+      	  function QueLayer4() {
+
+              var index = layer.open({
+              title: '第四题',
+              type: 1,
+              offset: ['60px', '120px'],
+              area: ['400px', '275px'],
+              shadeClose: false, //点击遮罩关闭
+      		closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>4. 在后随链上存在那种特殊结构成分\</p> \<label>\<input type="radio" name="radio" value="A">碱基对\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">冈崎片段\</label> \<br> \<label>\<input type="radio" name="radio" value="C">引物\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_4()" value="提交答案">  \</form> \<\/div>'
+            });
+          }
+      function QueLayer5() {
+
+              var index = layer.open({
+              title: '第五题',
+              type: 1,
+              offset: ['60px', '120px'],
+              area: ['400px', '275px'],
+              shadeClose: false, //点击遮罩关闭
+      		closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>5. 双链上的DNA缺口将有各种物质填补完整？\</p> \<label>\<input type="radio" name="radio" value="A">DNA多聚酶Ⅰ\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">DNA连接酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">DNA多聚酶Ⅱ\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_5()" value="提交答案">  \</form> \<\/div>'
+            });
+          }
+
+          function QueTime()
+          {
+            var video = document.getElementById("MyVideo");
+     	   if(video.currentTime>=10&&video.currentTime<=11&&Que1_time==0)
+     		   {
+     			   video.pause();
+           			QueLayer1();
+     			   Que1_time+=1;
+     		   }
+     	   else if(video.currentTime>=66&&video.currentTime<=67&&Que2_time==0)
+     		   {
+     			   video.pause();
+           			QueLayer2();
+     			   Que2_time+=1;
+     		   }
+     		else if(video.currentTime>=84&&video.currentTime<=85&&Que3_time==0)
+     		   {
+     			   video.pause();
+           			QueLayer3();
+     			   Que3_time+=1;
+     		   }
+     	  else if(video.currentTime>=124&&video.currentTime<=125&&Que4_time==0)
+     		   {
+     			   video.pause();
+           			QueLayer4();
+     			   Que4_time+=1;
+     		   }
+     	  else if(video.currentTime>=183&&video.currentTime<=184&&Que5_time==0)
+     		   {
+     			   video.pause();
+           			QueLayer5();
+     			   Que5_time+=1;
+     		   }
+     	  }
+
+
+	  function Get_Star()
+	  { if(correct1==1&&incorrect1==0)
+			  {
+				  correct_count+=1;
+			  }
+		  else{
+			  incorrect_count+=1;
+		  }
+	   if(correct2==1&&incorrect2==0)
+			  {
+				  correct_count+=1;
+			  }
+		  else{
+			  incorrect_count+=1;
+		  }
+	   if(correct3==1&&incorrect3==0)
+			  {
+				  correct_count+=1;
+			  }
+		  else{
+			  incorrect_count+=1;
+		  }
+      if(correct4==1&&incorrect4==0)
+      {
+        correct_count+=1;
+      }
+      else {
+        incorrect_count+=1;
+      }
+      if(correct5==1&&incorrect5==0)
+ 			  {
+ 				  correct_count+=1;
+ 			  }
+ 		  else{
+ 			  incorrect_count+=1;
+ 		  }
+		  alert("正确："+ correct_count+" 错误："+incorrect_count);
+	  }
+  </script>
+
+  <style>
+    #MyVideo {
+      width: 630px;
+      height: 380px;
+    }
+  </style>
+
+</head>
+  <div class="videobox" ontouchmove="return false;">
+    <video id="MyVideo" class="video-js" controls preload="auto" ontimeupdate="QueTime()" onEnded="Get_Star()"data-setup="{}" x5-video-player-fullscreen="true" x5-video-player-type="h5">
+      <source src="DNA.mp4" type="video/mp4">
+    </video>
+  </div>
+</body>
+</html>

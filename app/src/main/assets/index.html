@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <title>DNA Demo</title>
+  <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+  <link href="bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet">
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="layer-v3.0.3/layer/layer.js"></script>
+  <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/app.css" media="screen" />
+
+  <script type="text/javascript">
+    var Que1_time=0;
+    var Que2_time=0;
+    var Que3_time=0;
+    var Que4_time=0;
+    var Que5_time=0;
+    var correct1=0;
+    var incorrect1=0;
+    var correct2=0;
+    var incorrect2=0;
+    var correct3=0;
+    var incorrect3=0;
+    var correct4=0;
+    var incorrect4=0;
+    var correct5=0;
+    var incorrect5=0;
+    var correct_count=0;
+    var incorrect_count=0;
+
+
+    function CheckAns_1() {
+  var video = document.getElementById("MyVideo");
+       var temp = document.getElementsByName("radio");
+
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'C') {
+       correct1+=1;
+            layer.closeAll();
+            video.play();
+          }
+     else {
+            layer.msg('回答错误');
+       incorrect1+=1;
+          }
+        }
+      }
+
+    }
+    function CheckAns_2() {
+        var temp = document.getElementsByName("radio");
+      var video = document.getElementById("MyVideo");
+
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'C') {
+        correct2+=1;
+            layer.closeAll();
+            video.play();
+          }
+     else {
+            layer.msg('回答错误');
+       incorrect2+=1;
+          }
+        }
+      }
+
+    }
+  function CheckAns_3() {
+        var temp = document.getElementsByName("radio");
+      var video = document.getElementById("MyVideo");
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'C') {
+        correct3+=1;
+            layer.closeAll();
+            video.play();
+          }
+     else {
+            layer.msg('回答错误');
+       incorrect3+=1;
+          }
+        }
+      }
+
+    }
+
+    function CheckAns_4(){
+      var temp = document.getElementById("radio");
+      var video = document.getElementById("MyVideo");
+      for (i = 0; i < temp.length; i++) {
+        if (temp[i].checked) {
+          if (temp[i].value == 'B') {
+        correct4+=1;
+            layer.closeAll();
+            video.play();
+          }
+     else {
+            layer.msg('回答错误');
+       incorrect4+=1;
+          }
+        }
+      }
+    }
+
+    function CheckAns_5() {
+            var temp = document.getElementsByName("radio");
+          var video = document.getElementById("MyVideo");
+          for (i = 0; i < temp.length; i++) {
+            if (temp[i].checked) {
+              if (temp[i].value == 'B') {
+            correct5+=1;
+                layer.closeAll();
+                video.play();
+              }
+         else {
+                layer.msg('回答错误');
+           incorrect5+=1;
+              }
+            }
+          }
+
+        }
+
+        function QueLayer1() {
+
+              var index = layer.open({
+              title: '第一题',
+              type: 1,
+              offset: ['30px', '0px'],
+              area: ['380px', '300px'],
+              shadeClose: false, //点击遮罩关闭
+          closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>1.在DNA复制的第一步，需要结合哪种酶才能实现双链分离?\</p> \<label>\<input type="radio" name="radio" value="A">拓扑异构酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">引物酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">解旋酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">逆转录酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_1()" value="提交答案">  \</form> \<\/div>'
+
+            });
+          }
+
+          function QueLayer2() {
+
+              var index = layer.open({
+              title: '第二题',
+              type: 1,
+              offset: ['30px', '0px'],
+              area: ['380px', '300px'],
+              shadeClose: false, //点击遮罩关闭
+          closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>2. 在单链复制的第一步，需要哪种酶的帮助？\</p> \<label>\<input type="radio" name="radio" value="A">拓扑异构酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">连接酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">引发酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">转录酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_2()" value="提交答案">  \</form> \<\/div>'
+
+            });
+          }
+          function QueLayer3() {
+
+              var index = layer.open({
+              title: '第三题',
+              type: 1,
+              offset: ['30px', '0px'],
+              area: ['380px', '300px'],
+              shadeClose: false, //点击遮罩关闭
+          closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>3. DNA复制的第一步需要？\</p> \<label>\<input type="radio" name="radio" value="A">DNA解旋酶\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">DNA聚合酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">DAN修饰酶\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_3()" value="提交答案">  \</form> \<\/div>'
+            });
+          }
+          function QueLayer4() {
+
+              var index = layer.open({
+              title: '第四题',
+              type: 1,
+              offset: ['30px', '0px'],
+              area: ['380px', '300px'],
+              shadeClose: false, //点击遮罩关闭
+          closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>4. 在后随链上存在那种特殊结构成分\</p> \<label>\<input type="radio" name="radio" value="A">碱基对\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">冈崎片段\</label> \<br> \<label>\<input type="radio" name="radio" value="C">引物\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_4()" value="提交答案">  \</form> \<\/div>'
+            });
+          }
+      function QueLayer5() {
+
+              var index = layer.open({
+              title: '第五题',
+              type: 1,
+              offset: ['30px', '0px'],
+              area: ['380px', '300px'],
+              shadeClose: false, //点击遮罩关闭
+          closeBtn: 0,
+              content: '\<\div style="padding:3px;"> \<form method="post" name="form1"> \<p>5. 双链上的DNA缺口将有各种物质填补完整？\</p> \<label>\<input type="radio" name="radio" value="A">DNA多聚酶Ⅰ\</label>\  <br> \<label>\<input type="radio" name="radio" value="B">DNA连接酶\</label> \<br> \<label>\<input type="radio" name="radio" value="C">DNA多聚酶Ⅱ\</label>  \<br> \<label>\<input type="radio" name="radio" value="D">DNA转化酶\</label>\<br>\<br>\<input type="button" onclick="CheckAns_5()" value="提交答案">  \</form> \<\/div>'
+            });
+          }
+
+          function QueTime()
+          {
+            var video = document.getElementById("MyVideo");
+         if(video.currentTime>=10&&video.currentTime<=11&&Que1_time==0)
+           {
+             video.pause();
+                QueLayer1();
+             Que1_time+=1;
+           }
+         else if(video.currentTime>=66&&video.currentTime<=67&&Que2_time==0)
+           {
+             video.pause();
+                QueLayer2();
+             Que2_time+=1;
+           }
+        else if(video.currentTime>=84&&video.currentTime<=85&&Que3_time==0)
+           {
+             video.pause();
+                QueLayer3();
+             Que3_time+=1;
+           }
+        else if(video.currentTime>=124&&video.currentTime<=125&&Que4_time==0)
+           {
+             video.pause();
+                QueLayer4();
+             Que4_time+=1;
+           }
+        else if(video.currentTime>=183&&video.currentTime<=184&&Que5_time==0)
+           {
+             video.pause();
+                QueLayer5();
+             Que5_time+=1;
+           }
+        }
+
+
+    function Get_Star()
+    { if(correct1==1&&incorrect1==0)
+        {
+          correct_count+=1;
+        }
+      else{
+        incorrect_count+=1;
+      }
+     if(correct2==1&&incorrect2==0)
+        {
+          correct_count+=1;
+        }
+      else{
+        incorrect_count+=1;
+      }
+     if(correct3==1&&incorrect3==0)
+        {
+          correct_count+=1;
+        }
+      else{
+        incorrect_count+=1;
+      }
+      if(correct4==1&&incorrect4==0)
+      {
+        correct_count+=1;
+      }
+      else {
+        incorrect_count+=1;
+      }
+      if(correct5==1&&incorrect5==0)
+        {
+          correct_count+=1;
+        }
+      else{
+        incorrect_count+=1;
+      }
+      alert("正确："+ correct_count+" 错误："+incorrect_count);
+    }
+  </script>
+
+<style>
+.col-sm-7 div
+{
+  width: 600px;
+  height: 400px;
+}
+
+    .col-sm-7 div video{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="header podcast-header">
+    <div class="container header-container">
+      <div class="row podcast-header-top">
+        <div class="col-sm-6">
+          <h2 class="Lead"> Come to iatrology</h2>
+        </div>
+        <div class="col-sm-6">
+          <p class="lead">The Class where everyone chimes in.</p>
+        </div>
+      </div>
+      <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#phprt-main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="phprt-main-nav">
+            <ul class="nav navbar-nav">
+              <li><a href="https://www.phproundtable.com/about">About</a></li>
+              <li><a href="https://www.phproundtable.com/dev-shout-out">Course</a></li>
+              <li><a href="https://www.phproundtable.com/be-a-guest">Class</a></li>
+              <li><a href="https://www.phproundtable.com/contact">Contact</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="episode-next-container">
+    <div class="container">
+      <div class="episode-next">
+        <div class="row episode-list">
+          <div class="col-sm-7">
+            <div>
+              <video id="MyVideo"  controls preload="auto" ontimeupdate="QueTime()" onEnded="Get_Star()"data-setup="{}" x5-video-player-fullscreen="true" x5-video-player-type="h5">
+                <source src="DNA.mp4" type="video/mp4">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <p class="lead episode-next-label text-muted">Next Episode</p>
+            <p class="lead text-muted">
+              Late May (tentative)
+            </p>
+
+            <h1>Course 1: DNA</h1>
+            <p>DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms. Nearly every cell in a person’s body has the same DNA. Most DNA is located in the cell nucleus (where it is called nuclear DNA), but a small
+              amount of DNA can also be found in the mitochondria (where it is called mitochondrial DNA or mtDNA).</p>
+
+
+            <div class="guest-container">
+
+              <img src="image/pic1.jpg" alt="" data-toggle="tooltip" class="img-circle" data-placement="bottom" title="Sara Golemon" />
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
